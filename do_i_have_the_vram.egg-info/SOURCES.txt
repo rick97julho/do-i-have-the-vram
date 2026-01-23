@@ -1,0 +1,13 @@
+README.md
+setup.py
+do_i_have_the_vram/__init__.py
+do_i_have_the_vram/cli.py
+do_i_have_the_vram/hub_client.py
+do_i_have_the_vram/memory_model.py
+do_i_have_the_vram/safetensors_meta.py
+do_i_have_the_vram.egg-info/PKG-INFO
+do_i_have_the_vram.egg-info/SOURCES.txt
+do_i_have_the_vram.egg-info/dependency_links.txt
+do_i_have_the_vram.egg-info/entry_points.txt
+do_i_have_the_vram.egg-info/requires.txt
+do_i_have_the_vram.egg-info/top_level.txt

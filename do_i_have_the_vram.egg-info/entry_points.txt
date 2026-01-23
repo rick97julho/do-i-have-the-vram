@@ -1,0 +1,2 @@
+[console_scripts]
+do-i-have-the-vram = do_i_have_the_vram.cli:main
