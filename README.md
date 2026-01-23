@@ -1,6 +1,6 @@
 # Do I Have The VRAM?
 
-![PyPI version](https://img.shields.io/pypi/v/do-i-have-the-vram)
+[![PyPI version](https://img.shields.io/pypi/v/do-i-have-the-vram)](https://pypi.org/project/do-i-have-the-vram/)
 
 **"Can I run this model?"** — The question we ask every time a new LLM drops.
 
