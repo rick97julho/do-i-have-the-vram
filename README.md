@@ -26,7 +26,7 @@ pip install do-i-have-the-vram
 
 ### From Source
 ```bash
-git clone https://github.com/yourusername/do-i-have-the-vram.git
+git clone https://github.com/cneuralnetwork/do-i-have-the-vram.git
 cd do-i-have-the-vram
 pip install -e .
 ```
